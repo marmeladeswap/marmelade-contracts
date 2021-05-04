@@ -181,7 +181,7 @@ contract MarmelToken is BEP20('Marmelade', 'MARMEL') {
         internal
     {
         address currentDelegate = _delegates[delegator];
-        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying EGGs (not scaled);
+        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying MARMELs (not scaled);
         _delegates[delegator] = delegatee;
 
         emit DelegateChanged(delegator, currentDelegate, delegatee);
